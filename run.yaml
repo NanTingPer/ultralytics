@@ -1,0 +1,4 @@
+nc: 1
+names: ['mite']
+train: C:/CDR/rundata/images/train
+val: C:/CDR/rundata/images/val
