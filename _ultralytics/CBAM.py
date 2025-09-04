@@ -6,6 +6,9 @@ class CBAM(nn.Module):
     在 ultralytics 的 __init__ 中  from ultralytics.nn.modules import CBAM
     在 ultralytics 的 __init__ 中  __all__ => add "CBAM"
     在 修改 ultralytics/cfg/models/11/yolo11.yaml
+
+    在 nn.tasks中添加CBAM为 CBAM -> nn.modules.conv （训练）
+    在 __init__ 中 添加CBAM （导出onnx）
     """
 
     def __init__(self, c1, kernel_size=7):

@@ -10,12 +10,10 @@
 '''
 下面是导入
 '''
-from ultralytics.nn.modules import CBAM
-
 print("Hello")
 from ultralytics import YOLO
 
-model = YOLO("./best_noCBAM.pt")
+model = YOLO("./runs/detect/yolo11_train/weights/best.pt")
 model.export(
     format="onnx",
     opset=12,
