@@ -12,7 +12,6 @@ from ultralytics.models import NAS, RTDETR, SAM, YOLO, YOLOE, FastSAM, YOLOWorld
 from ultralytics.utils import ASSETS, SETTINGS
 from ultralytics.utils.checks import check_yolo as checks
 from ultralytics.utils.downloads import download
-from ultralytics.nn.modules import  CBAM
 
 settings = SETTINGS
 __all__ = (
@@ -28,5 +27,4 @@ __all__ = (
     "checks",
     "download",
     "settings",
-    "CBAM"
 )
