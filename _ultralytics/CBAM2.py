@@ -4,11 +4,12 @@ import torch
 class CBAM2(nn.Module):
     def __init__(self, c1, kernel_size=7):
         super().__init__()
+        in_channel = max(1, c1 // 16)
         self.channel_attention = nn.Sequential(
             nn.AdaptiveAvgPool2d(1),
-            nn.Conv2d(c1, c1 // 16, kernel_size=1, bias=False),
+            nn.Conv2d(c1, in_channel, kernel_size=1, bias=False),
             nn.ReLU(inplace=True),
-            nn.Conv2d(c1 // 16, c1, kernel_size=1, bias=False),
+            nn.Conv2d(in_channel, c1, kernel_size=1, bias=False),
             nn.Sigmoid()
         )
 
